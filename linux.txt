@@ -1,0 +1,3 @@
+awk < R4826-201801_RCMND_SPSH2.txt '{print $98}' | sort | uniq | wc –l
+head -1 R4826-201801_RCMND_SPSH.txt | tr '|' '\n' | cat -n | grep "rcmnd_prtf_cd"
+awk '{ if($98 = "CONSMOB") { print }}' R4826-201805_RCMND_SPSH.txt > R4826-201805_RCMND_SPSH2.txt
